@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter,Routes ,Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { DataProvider } from './components/Context';
+import Products from './components/Products';
+
 import './App.css';
 // import 'bootstrap/dist/css/bootstrap.rtl.min.css';
 import Layout from './components/Layout';
@@ -14,10 +17,14 @@ import Forgotpassword from './pages/Forgotpassword';
 import Signup from './pages/Signup';
 import Resetpassword from './pages/Resetpassword';
 import Singleproduct from './pages/Singleproduct';
+import Details from './components/Details';
+
 
 
 import Store2 from './pages/Store2';
 import Store3 from './pages/Store3';
+import Cart from './components/Cart';
+
 
 
 
@@ -26,9 +33,10 @@ import NotFound from './pages/NotFound';
 function App() {
   return (
     <>
-    <BrowserRouter>
-      <Routes>
-          <Route path='/' element={<Layout />}>
+      <DataProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Layout />}>
               <Route index element={<Home />} />
               <Route path='About' element={<About />} />
               <Route path='Contact' element={<Contact />} />
@@ -40,17 +48,26 @@ function App() {
               <Route path='Forgotpassword' element={<Forgotpassword />} />
               <Route path='Signup' element={<Signup />} />
               <Route path='Resetpassword' element={<Resetpassword />} />
+
+              
               <Route path='Store2' element={<Store2 />} />
               <Route path='Store3' element={<Store3 />} />
+
+
+              <Route path='products' element={<Products />} />
+              <Route path='products/:id' element={<Details />} />
+              <Route path='cart' element={<Cart />} />
+
+
 
 
 
 
               <Route path="*" element={<NotFound />} />
-          </Route>
-      </Routes>
-    </BrowserRouter>
-    
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </DataProvider>
     </>
   );
 }

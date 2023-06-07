@@ -2,15 +2,15 @@ import React from 'react'
 import ReactStars from "react-rating-stars-component"
 import { NavLink, Link } from 'react-router-dom'
 
-
+import labtopRog from '../assets/images/product/banner/labtopROG4.jpg'
 
 function Discounted_products() {
   return (
-    <div className='col-12 col-lg-4 my-3'>
+    <div className='col-12 col-lg-4 my-3 '>
       <div className="discounted-products-card">
-        <div className="d-flex flex-wrap justify-content-between">
+        <div className="d-flex flex-wrap justify-content-between p-2 p-lg-0">
           <div className='col-12 col-lg-6'>
-            <img src="assets/images/product/banner/labtopROG4.jpg" className='img-fluid rounded-3' alt="" />
+            <img src={labtopRog} className='img-fluid rounded-3' alt="" />
           </div>
           <div className="col-12 col-lg-5 pt-3 pt-lg-0 discounted-products-content">
             <h5 className="brand">ایسوس</h5>

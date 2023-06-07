@@ -3,6 +3,12 @@ import BreadCrumb from '../components/BreadCrumb'
 import Meta from '../components/Meta'
 import ProductCard from '../components/ProductCard'
 
+// icons
+
+import gr4 from '../assets/images/icon/gr4.svg'
+import gr3 from '../assets/images/icon/gr3.svg'
+import gr2 from '../assets/images/icon/gr2.svg'
+import gr from '../assets/images/icon/gr.svg'
 
 
 const Store = () => {
@@ -15,8 +21,6 @@ const Store = () => {
       color-wrapper py-5">
         <div className="container-fluid">
           <div className="row ">
-
-
 
             <div className="col-2 d-none d-lg-block">
               <div className='filter-card mb-3'>
@@ -79,10 +83,10 @@ const Store = () => {
                   <div className='d-flex align-items-center gap-10'>
                     <p className="totalproducts mb-0"> 21 محصول</p>
                     <div className="d-flex gap-10 align-items-center">
-                      <img src="assets/images/icon/gr4.svg" alt="grid" className='d-block img-fluid' />
-                      <img src="assets/images/icon/gr3.svg" alt="grid" className='d-block img-fluid' />
-                      <img src="assets/images/icon/gr2.svg" alt="grid" className='d-block img-fluid' />
-                      <img src="assets/images/icon/gr.svg" alt="grid" className='d-block img-fluid' />
+                      <img src={gr4} alt="grid" className='d-block img-fluid' />
+                      <img src={gr3} alt="grid" className='d-block img-fluid' />
+                      <img src={gr2} alt="grid" className='d-block img-fluid' />
+                      <img src={gr} alt="grid" className='d-block img-fluid' />
                     </div>
                   </div>
                 </div>

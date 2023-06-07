@@ -1,17 +1,26 @@
-import React from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { BsSearch } from 'react-icons/bs'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import React, { useContext } from 'react'
+import {DataContext} from './Context';
+
+import logoTitan from'../assets/images/logo/titan-logo.png';
+
 
 function Header() {
+
+  const value = useContext(DataContext);
+  const [cart] = value.cart;
+
+
   return (
     <>
       <nav className="navbar navbar-expand-lg  ">
         <div className="container-fluid mx-2">
-          <img className="navbar-brand logo-titan" src='assets/images/logo/titan-logo.png' />
+          <img className="navbar-brand logo-titan" src={logoTitan} />
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -21,7 +30,7 @@ function Header() {
                 <p className=" dropdown-toggle  d-flex align-items-center p-0 m-0 py-2" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                   <span>دسته بندی</span>
                 </p>
-                <ul className="dropdown-menu  gap-30 ">
+                <ul className="dropdown-menu">
                   <li><Link className="dropdown-item " to=''>فهرست</Link></li>
                   <li><Link className="dropdown-item " to=''>فهرست </Link></li>
                   <li><Link className="dropdown-item " to=''>فهرست</Link></li>
@@ -53,7 +62,8 @@ function Header() {
                 <Link to='/login' className='align-items-center ms-3'>
                   <i class="bi bi-person  h4"></i>
                 </Link>
-                <Link to='/cart' className='align-items-center ms-3'>
+                <Link to='/cart' className='align-items-center ms-3 position-relative py-2'>
+                  <span className='position-absolute bg-danger badge rounded-pill top-0 me-5'>{cart.length}</span>
                   <i class="bi bi-cart4  h4 me-5"></i>
                 </Link>
               </ul>

@@ -1,18 +1,20 @@
 import NotSvg from '../assets/not-found.svg'
 
+import { NavLink, Link } from 'react-router-dom'
 
 const NotFound = () => {
     return (
-
-        <div class="container pt-5">
-            <section class="section error-404 min-vh-100 d-flex flex-column align-items-center justify-content-center pt-5">
-                <h1>404</h1>
-                <h2>صفحه ای که به دنبال آن هستید وجود ندارد.</h2>
-                <a class="btn" >بازگشت به صفحه اصلی</a>
-                <img src={NotSvg} class="img-fluid py-5" alt="Page Not Found" />
-                <div class="credits"> by <a href="#">Titan It Shop Group</a> </div>
-            </section>
+        <div className="container">
+                <div class="d-flex justifu-content-center notFound p-0 m-0">
+                    <section class="section error-404 min-vh-100 d-flex flex-column align-items-center justify-content-center ">
+                        <h3>404</h3>
+                        <h2>صفحه ای که به دنبال آن هستید وجود ندارد.</h2>
+                        <Link to='/' class="btn" >بازگشت به صفحه اصلی</Link>
+                        <img src={NotSvg} class="img-fluid pt-2" alt="Page Not Found" />
+                    </section>
+                </div>
         </div>
+
 
     )
 }

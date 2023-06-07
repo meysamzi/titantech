@@ -21,10 +21,8 @@ const Singleproduct = () => {
                             <div className="main-product-image">
                                 <div>
                                     <div><img src={asus} className='img-fluid' alt="" /></div>
-
                                 </div>
                             </div>
-
                             <div className="other-product-images d-flex flex-wrap gap-15">
                                 <div><img src={asus} className='img-fluid' alt="" /></div>
                                 <div><img src={asus} className='img-fluid' alt="" /></div>
@@ -46,7 +44,6 @@ const Singleproduct = () => {
                                             value={3}
                                             activeColor="#ffd700" />
                                     </div>
-                                    <a href=""></a>
                                 </div>
 
                                 <div className="border-bottom ">
