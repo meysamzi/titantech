@@ -31,6 +31,15 @@ import Cart from './components/Cart';
 import NotFound from './pages/NotFound';
 
 function App() {
+const myRoutes = [
+  {path:"/about",element:<About/>},
+  {path:"/Contact",element:<Contact/>},
+  {path:"/Product",element:<Store/>},
+  {path:"/Wishlist",element:<Wishlist/>},
+]
+
+// Loop through your Routes instead of writing them many times
+
   return (
     <>
       <DataProvider>
